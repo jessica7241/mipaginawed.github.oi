@@ -1,0 +1,431 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+
+
+header {
+    width: 100%;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #38bdf8;
+    font-size: 35px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+    nav a:hover {
+        color: #38bdf8;
+    }
+
+main {
+    margin-top: 90px;
+}
+
+
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+.hero button,
+.empresa-texto button,
+.producto button,
+form button,
+.flip-card button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#2563eb,#0ea5e9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(14,165,233,0.3);
+}
+
+    .hero button:hover,
+    .empresa-texto button:hover,
+    .producto button:hover,
+    form button:hover,
+    .flip-card button:hover {
+        transform: translateY(-3px);
+    }
+
+
+
+.empresa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 10%;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.empresa-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+    .empresa-texto h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .empresa-texto p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #e2e8f0;
+    }
+
+.empresa-imagen img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+    .empresa-imagen img:hover {
+        transform: scale(1.03);
+    }
+
+
+
+.servicios,
+.contacto,
+.colaboradores,
+.productos {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+    .servicios h2,
+    .contacto h2,
+    .colaboradores h2,
+    .productos h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+.cards,
+.productos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .card:hover img {
+        transform: scale(1.03);
+    }
+
+    .card h3 {
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+.productos {
+    background: #e2e8f0;
+}
+
+.producto {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+    .producto:hover {
+        transform: translateY(-10px);
+    }
+
+    .producto img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .producto h3 {
+        margin-bottom: 15px;
+    }
+
+    .producto p {
+        margin-bottom: 20px;
+    }
+
+.precio {
+    font-size: 25px;
+    color: #0ea5e9;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input,
+textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.flip-card {
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.active .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flip-card-front {
+    background: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg,#1e3a8a,#0ea5e9);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #38bdf8;
+}
+
+
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .empresa {
+        text-align: center;
+    }
+
+    .card,
+    .producto,
+    .flip-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Contenedor principal en dos columnas */
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+/* Cada columna toma el 45% del ancho en pantallas grandes */
+.contacto-info, .contacto-mapa {
+    flex: 1 1 45%;
+    min-width: 300px; /* Evita que se encojan de más en móviles */
+}
+
+/* Estilos de los bloques de texto */
+.info-item {
+    margin-bottom: 20px;
+}
+
+    .info-item h3 {
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .info-item a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+/* Espaciado para los enlaces de redes */
+.redes-enlaces a {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Redondear las esquinas del mapa */
+.contacto-mapa iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

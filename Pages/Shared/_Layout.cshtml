@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Sistems Solutions</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>Sistemas Solutions</h1>
+       
+        <nav>
+
+            <ul>
+
+                    <li><a asp-page="/Index">Inicio</a></li>
+
+                    <li><a asp-page="/Servicios">Servicios</a></li>
+
+                    <li><a asp-page="/Productos">Productos</a></li>
+
+                    <li><a asp-page="/Colaboradores">Colaboradores</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Sistemas Solutions - Todos los derechos reservados
+        </p>
+
+    </footer>
+
+</body>
+</html>
